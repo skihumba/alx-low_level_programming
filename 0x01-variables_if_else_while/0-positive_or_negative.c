@@ -2,13 +2,15 @@
 #include <time.h>
 #include <stdio.h>
 
-/*main - Entry point
+/**
+ * main - assigns a random number to int n everytime
+ * it executes, and prints whether it is positive or not
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n ;
+	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -16,8 +18,7 @@ int main(void)
 		printf("%d is positive\n", n);
 	else if (n == 0)
 		printf("%d is zero\n", n);
-	else if
-		printf("%d is negative", n);
-	return(0);
-
+	else if (n < 0)
+		printf("%d is negative\n", n);
+	return (0);
 }
